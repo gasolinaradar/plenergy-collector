@@ -1,0 +1,48 @@
+{
+  "name": "@gasolinaradar/plenergy-collector",
+  "version": "1.0.0",
+  "description": "Collector for the Plenergy fuel station dataset (Spain) returning normalized fuel stations with prices",
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "files": [
+    "src",
+    "LEGAL.md",
+    "THIRD_PARTY_NOTICES.md",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gasolinaradar/plenergy-collector.git"
+  },
+  "homepage": "https://github.com/gasolinaradar/plenergy-collector#readme",
+  "bugs": {
+    "url": "https://github.com/gasolinaradar/plenergy-collector/issues"
+  },
+  "scripts": {
+    "test": "node --test test/collector.test.js",
+    "prepublishOnly": "npm test"
+  },
+  "keywords": [
+    "plenergy",
+    "fuel",
+    "stations",
+    "gasolineras",
+    "espana",
+    "spain",
+    "combustibles",
+    "collector"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "axios": "^1.13.2"
+  }
+}
