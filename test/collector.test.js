@@ -216,3 +216,32 @@ test('extractPricesFromHtml parses station page price columns', () => {
   });
   assert.deepEqual(extractPricesFromHtml(''), {});
 });
+
+const REAL_PLENOIL_PAGE_HTML = `<html>
+  <body>
+    <div id="colMovilDiesel" class="elementor-element elementor-widget">
+      <div class="col"><h3>DIÉSEL</h3><h4>1,749</h4></div>
+    </div>
+    <div id="colMovilDieselPlus" class="elementor-element elementor-widget">
+      <div class="col"><h3>DIÉSEL PLUS</h3><h4>1,899</h4></div>
+    </div>
+    <div id="colMovilSP95" class="elementor-element elementor-widget">
+      <div class="col"><h3>SP95</h3><h4>1,715</h4></div>
+    </div>
+    <div id="colMovilSP95Plus" class="elementor-element elementor-widget">
+      <div class="col"><h3>SP95 PLUS</h3><h4>1,895</h4></div>
+    </div>
+    <div id="colEscritorioDiesel" class="elementor-element elementor-widget">
+      <div class="col"><h3>DIÉSEL</h3><h4>1,749</h4></div>
+    </div>
+  </body>
+</html>`;
+
+test('extractPricesFromHtml maps real plenoil page labels to slugs', () => {
+  assert.deepEqual(extractPricesFromHtml(REAL_PLENOIL_PAGE_HTML), {
+    disel: 1.749,
+    diselplus: 1.899,
+    sp95: 1.715,
+    sp95plus: 1.895,
+  });
+});

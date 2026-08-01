@@ -216,7 +216,8 @@ Este proyecto **no está afiliado** a Plenergy. Los datos pertenecen a Plenergy 
 ## Tests
 
 ```bash
-npm test
+npm test        # unit tests (mocked HTTP)
+npm run test:live  # live tests hitting the real API (network required; dataset + page scrape sample)
 ```
 
 ---
