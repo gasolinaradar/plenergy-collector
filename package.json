@@ -1,6 +1,6 @@
 {
   "name": "@gasolinaradar/plenergy-collector",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Collector for the Plenergy fuel station dataset (Spain) returning normalized fuel stations with prices",
   "main": "src/index.js",
   "exports": {
@@ -44,6 +44,6 @@
     "access": "public"
   },
   "dependencies": {
-    "axios": "^1.13.2"
+    "axios": "^1.20.0"
   }
 }
