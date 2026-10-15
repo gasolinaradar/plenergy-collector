@@ -1,4 +1,17 @@
+<div align="center">
+
 # @gasolinaradar/plenergy-collector
+
+**EN:** Collector for the Plenergy fuel station dataset (Spain) — downloads the public station list from plenergy.es, normalizes every station, and scrapes each station’s page when prices are missing.  
+**ES:** Colector del dataset de estaciones de servicio de Plenergy (España) — descarga el listado público de estaciones de plenergy.es, normaliza cada estación y hace scraping de su página cuando faltan precios.
+
+[![npm version](https://img.shields.io/npm/v/%40gasolinaradar%2Fplenergy-collector)](https://www.npmjs.com/package/@gasolinaradar/plenergy-collector)
+[![npm license](https://img.shields.io/npm/l/%40gasolinaradar%2Fplenergy-collector)](https://github.com/gasolinaradar/plenergy-collector/blob/main/LICENSE)
+[![node version](https://img.shields.io/node/v/%40gasolinaradar%2Fplenergy-collector)](https://github.com/gasolinaradar/plenergy-collector#readme)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/gasolinaradar/plenergy-collector/issues)
+[![Spain](https://img.shields.io/badge/Spain-ES-orange)](https://github.com/gasolinaradar/plenergy-collector#readme)
+
+</div>
 
 <!-- EN -->
 
@@ -103,7 +116,7 @@ const stations = await plenergyCollector.fetch({
 
 ---
 
-## Options / Opciones
+## Configuration / Configuración
 
 | Option             | Type                     | Default | Description                                                                |
 | ------------------ | ------------------------ | ------- | -------------------------------------------------------------------------- |
@@ -129,7 +142,7 @@ const stations = await plenergyCollector.fetch({
 
 ---
 
-## Output schema / Esquema de salida
+## Station contract / Contrato de estación
 
 Each normalized station looks like this / Cada estación normalizada tiene esta forma:
 
@@ -197,33 +210,40 @@ Este proyecto **no está afiliado** a Plenergy. Los datos pertenecen a Plenergy 
 
 ---
 
-## Legal / Legal
+## Ecosystem / Ecosistema
 
-**EN:**
+**EN:** This is the `@gasolinaradar/plenergy-collector` package.  
+- [GitHub repository](https://github.com/gasolinaradar/plenergy-collector)  
+- [npm package](https://www.npmjs.com/package/@gasolinaradar/plenergy-collector)  
+- [Legal notice / disclaimer](./LEGAL.md)  
+- [Third-party notices / data attribution](./THIRD_PARTY_NOTICES.md)  
+- [Report issues or feature requests](https://github.com/gasolinaradar/plenergy-collector/issues) — PRs welcome!
 
-- [LEGAL.md](./LEGAL.md) — Legal notice and disclaimer (bilingual).
-- [THIRD_PARTY_NOTICES.md](./THIRD_PARTY_NOTICES.md) — Data attribution and third-party licenses.
-- [LICENSE](./LICENSE) — MIT License (applies to this software, **not** to the underlying Plenergy data).
-
-**ES:**
-
-- [LEGAL.md](./LEGAL.md) — Aviso legal y descargo de responsabilidad (bilingüe).
-- [THIRD_PARTY_NOTICES.md](./THIRD_PARTY_NOTICES.md) — Atribución de datos y licencias de terceros.
-- [LICENSE](./LICENSE) — Licencia MIT (aplica a este software, **no** a los datos subyacentes de Plenergy).
+**ES:** Este es el paquete `@gasolinaradar/plenergy-collector`.  
+- [Repositorio en GitHub](https://github.com/gasolinaradar/plenergy-collector)  
+- [Paquete en npm](https://www.npmjs.com/package/@gasolinaradar/plenergy-collector)  
+- [Aviso legal y descargo de responsabilidad](./LEGAL.md)  
+- [Avisos de terceros y atribución de datos](./THIRD_PARTY_NOTICES.md)  
+- [Reporta incidencias o solicita mejoras](https://github.com/gasolinaradar/plenergy-collector/issues) — ¡Se aceptan PRs!
 
 ---
 
-## Tests
+## Testing / Pruebas
 
-```bash
-npm test        # unit tests (mocked HTTP)
-npm run test:live  # live tests hitting the real API (network required; dataset + page scrape sample)
-```
+**EN:** Use the real scripts from `package.json`:
+
+- `npm test` — unit tests (mocked HTTP), runs `node --test test/collector.test.js`.
+- `npm run test:live` — live tests hitting the real API (network required; dataset + page scrape sample).
+
+**ES:** Usa los scripts reales definidos en `package.json`:
+
+- `npm test` — pruebas unitarias (HTTP mockeado), ejecuta `node --test test/collector.test.js`.
+- `npm run test:live` — pruebas en vivo contra la API real (requiere conexión de red; dataset + scraping de página de muestra).
 
 ---
 
 ## License / Licencia
 
-**EN:** MIT. See [LICENSE](./LICENSE). The Plenergy data is **not** covered by this license.
+**EN:** MIT. See [LICENSE](./LICENSE). The Plenergy data is **not** covered by this license. See also [LEGAL.md](./LEGAL.md) and [THIRD_PARTY_NOTICES.md](./THIRD_PARTY_NOTICES.md) for data attribution and legal notes.
 
-**ES:** MIT. Consulta [LICENSE](./LICENSE). Los datos de Plenergy **no** están cubiertos por esta licencia.
+**ES:** MIT. Consulta [LICENSE](./LICENSE). Los datos de Plenergy **no** están cubiertos por esta licencia. Consulta también [LEGAL.md](./LEGAL.md) y [THIRD_PARTY_NOTICES.md](./THIRD_PARTY_NOTICES.md) para la atribución de datos y las notas legales.
